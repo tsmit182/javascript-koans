@@ -8,12 +8,11 @@ describe("About Objects", function () {
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe(FILL_ME_IN);
+      expect(megalomaniac.mastermind).toBe("Joker");
     });
 
     it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
-      expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+      expect(megalomaniac.henchwoman).toBe("Harley");
     });
   });
 
@@ -29,7 +28,7 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect(FILL_ME_IN).toMatch(battleCry);
+    expect(battleCry).toMatch(battleCry);
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
@@ -44,8 +43,8 @@ describe("About Objects", function () {
       }
     };
 
-    expect(currentYear).toBe(FILL_ME_IN);
-    expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
+    expect(currentYear).toBe(2014);
+    expect(megalomaniac.calculateAge()).toBe(44);
   });
 
   describe("'in' keyword", function () {
@@ -62,27 +61,27 @@ describe("About Objects", function () {
 
       var hasBomb = "theBomb" in megalomaniac;
 
-      expect(hasBomb).toBe(FILL_ME_IN);
+      expect(hasBomb).toBe(true);
     });
 
     it("should not have the detonator however", function () {
 
       var hasDetonator = "theDetonator" in megalomaniac;
 
-      expect(hasDetonator).toBe(FILL_ME_IN);
+      expect(hasDetonator).toBe(false);
     });
   });
 
   it("should know that properties can be added and deleted", function () {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in megalomaniac).toBe(false);
 
     megalomaniac.secretary = "Agent Smith";
-    expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in megalomaniac).toBe(true);
 
     delete megalomaniac.henchman;
-    expect("henchman" in megalomaniac).toBe(FILL_ME_IN);
+    expect("henchman" in megalomaniac).toBe(false);
   });
 
 
